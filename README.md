@@ -1,15 +1,15 @@
-# README — Cómo ejecutar el sistema en CLIPS
+# README — How to Run the System in CLIPS
 
-## Requisitos
-- CLIPS 
-- Todos los archivos `.clp` en el mismo directorio.
+## Requirements
+- CLIPS  
+- All `.clp` files must be in the same directory.
 
 ---
 
-## Ejecución estándar (flujo completo interactivo)
+## Standard Execution (full interactive flow)
 
-1) Abrir CLIPS en la carpeta del proyecto.  
-2) Cargar los módulos en este orden (el orden importa):
+1) Open CLIPS in the project folder.  
+2) Load the modules in this order (the order matters):
 
     (load "main.clp")
     (load "recap_info.clp")
@@ -17,21 +17,21 @@
     (load "asociacion.clp")
     (load "refinamiento.clp")
 
-3) Inicializar la base de hechos y reglas:
+3) Initialize the fact and rule base:
 
     (reset)
 
-4) Ejecutar:
+4) Execute:
 
     (run)
 
 ---
 
-## Ejecución con restricciones predefinidas (atajo para pruebas)
+## Execution with predefined constraints (testing shortcut)
 
-Si quiere saltar el diálogo y usar las condiciones por defecto del módulo **ABSTRACCION**:
+If you want to skip the dialog and use the default conditions from the **ABSTRACCION** module:
 
-1) Cargar todo exactamente igual que arriba:
+1) Load everything exactly as above:
 
     (load "main.clp")
     (load "recap_info.clp")
@@ -39,13 +39,11 @@ Si quiere saltar el diálogo y usar las condiciones por defecto del módulo **AB
     (load "asociacion.clp")
     (load "refinamiento.clp")
 
-2) Inicializar:
+2) Initialize:
 
     (reset)
 
-3) Enfocar el módulo ABSTRACCION para que inserte las condiciones por defecto y dispare el flujo de trabajo:
+3) Focus the ABSTRACCION module so it inserts the default conditions and triggers the workflow:
 
     (focus ABSTRACCION)
     (run)
-
-
